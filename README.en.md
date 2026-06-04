@@ -65,6 +65,8 @@ See [examples](examples/README.md) for runnable examples and an embedded sample 
 
 If the host process may already have a conflicting `onnxruntime.dll` loaded, callers can isolate OneOCR in their own subprocess. This repository provides the `cmd/oneocr` CLI, but the SDK does not include a helper, daemon, or hidden IPC layer.
 
+Download the standalone `oneocr.exe` from GitHub Releases, or install it with Go:
+
 Use the single-image command for low-frequency calls:
 
 ```powershell

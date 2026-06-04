@@ -1,0 +1,51 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build release
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Test
+        run: go test ./...
+
+      - name: Build oneocr.exe
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path dist | Out-Null
+          $env:GOOS = "windows"
+          $env:GOARCH = "amd64"
+          go build -trimpath -ldflags "-s -w" -o dist/oneocr.exe ./cmd/oneocr
+
+      - name: Package
+        shell: pwsh
+        run: |
+          $package = "win-oneocr-go_oneocr_windows_amd64_${{ github.ref_name }}"
+          New-Item -ItemType Directory -Force -Path "dist/$package" | Out-Null
+          Copy-Item dist/oneocr.exe "dist/$package/oneocr.exe"
+          Copy-Item README.md "dist/$package/README.md"
+          Copy-Item README.en.md "dist/$package/README.en.md"
+          Copy-Item LICENSE "dist/$package/LICENSE"
+          Compress-Archive -Path "dist/$package/*" -DestinationPath "dist/$package.zip" -Force
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/win-oneocr-go_oneocr_windows_amd64_${{ github.ref_name }}.zip
+          generate_release_notes: true

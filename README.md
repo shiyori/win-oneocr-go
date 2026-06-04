@@ -65,6 +65,8 @@ result, err := oneocrgocv.RecognizeMat(ctx, engine, mat)
 
 如果宿主进程可能已经加载了冲突的 `onnxruntime.dll`，调用方可以自行用子进程方式隔离 OneOCR。仓库提供 `cmd/oneocr` 命令行工具，但 SDK 不内置 helper、daemon 或隐藏 IPC。
 
+可从 GitHub Releases 下载独立 `oneocr.exe`，也可以通过 Go 安装：
+
 单图命令适合低频调用：
 
 ```powershell
