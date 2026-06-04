@@ -1,8 +1,24 @@
+<div align="center">
+
 # win-oneocr-go
 
-[中文](README.md) | [English](README.en.md)
+<p>
+  <a href="https://pkg.go.dev/github.com/shiyori/win-oneocr-go"><img alt="Go Reference" src="https://pkg.go.dev/badge/github.com/shiyori/win-oneocr-go.svg"></a>
+  <a href="https://goreportcard.com/report/github.com/shiyori/win-oneocr-go"><img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/shiyori/win-oneocr-go"></a>
+  <a href="https://github.com/shiyori/win-oneocr-go/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/shiyori/win-oneocr-go?style=flat"></a>
+  <a href="https://github.com/shiyori/win-oneocr-go/releases"><img alt="GitHub downloads" src="https://img.shields.io/github/downloads/shiyori/win-oneocr-go/total?label=downloads"></a>
+  <a href="https://github.com/shiyori/win-oneocr-go/releases"><img alt="Release" src="https://img.shields.io/github/v/release/shiyori/win-oneocr-go?sort=semver"></a>
+  <a href="./LICENSE"><img alt="License" src="https://img.shields.io/github/license/shiyori/win-oneocr-go"></a>
+</p>
 
-Windows 截图工具 OneOCR 运行时的 Go SDK 和命令行工具。
+<p>
+  <a href="./README.md">中文</a> ·
+  <a href="./README.en.md">English</a>
+</p>
+
+<p>Windows 截图工具 OneOCR 运行时的 Go SDK 和命令行工具。</p>
+
+</div>
 
 ## Go 集成
 
