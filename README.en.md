@@ -127,3 +127,13 @@ This repository is licensed under `AGPL-3.0-only`.
 ## Notes
 
 This project does not redistribute Microsoft files. It reads `oneocr.dll`, `oneocr.onemodel`, and `onnxruntime.dll` from an installed Windows Snipping Tool package under `C:\Program Files\WindowsApps\Microsoft.ScreenSketch_*\SnippingTool`.
+
+## Disclaimer
+
+This is an unofficial project and is not affiliated with, endorsed by, or authorized by Microsoft. It only provides a Go SDK and CLI for interacting with the OneOCR runtime from a Windows Snipping Tool installation on the user's own machine.
+
+This project does not redistribute or embed Microsoft's `oneocr.dll`, `oneocr.onemodel`, or `onnxruntime.dll`; it only reads files already installed on the user's machine. Microsoft, Windows, Snipping Tool, and related names belong to their respective owners.
+
+Users are responsible for ensuring that their use complies with applicable laws, third-party software licenses, and terms of service. Do not use this project for privacy-invasive, unauthorized, or unlawful recognition or data collection.
+
+This project is provided under `AGPL-3.0-only` without any express or implied warranty except as required by the license. This disclaimer does not modify the terms of `AGPL-3.0-only`.

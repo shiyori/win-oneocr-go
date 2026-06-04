@@ -127,3 +127,13 @@ RGBA bytes 请求后接 raw RGBA bytes；`stride` 可省略，默认 `width * 4`
 ## 说明
 
 本项目不重新分发微软文件，只读取用户本机已安装 Windows 截图工具中的 `oneocr.dll`、`oneocr.onemodel` 和 `onnxruntime.dll`。默认扫描路径为 `C:\Program Files\WindowsApps\Microsoft.ScreenSketch_*\SnippingTool`。
+
+## 免责声明
+
+本项目是非官方项目，不隶属于、代表或获得 Microsoft 授权。本项目仅提供与用户本机已安装 Windows 截图工具 OneOCR 运行时交互的 Go SDK 和命令行工具。
+
+本项目不分发、不嵌入 Microsoft 的 `oneocr.dll`、`oneocr.onemodel` 或 `onnxruntime.dll`，只读取用户本机已安装的相关文件。Microsoft、Windows、Snipping Tool 等名称归其各自权利人所有。
+
+使用者应自行确保其使用行为符合适用法律法规、第三方软件许可和服务条款。请勿将本项目用于侵犯隐私、未授权采集/识别或其他违法用途。
+
+本项目按 `AGPL-3.0-only` 协议提供，除许可证明确规定外，不提供任何明示或默示担保。本免责声明不改变 `AGPL-3.0-only` 的授权条款。
